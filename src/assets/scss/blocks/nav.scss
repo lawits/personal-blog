@@ -1,0 +1,47 @@
+.nav__list{
+  display: flex;
+}
+.nav__item{
+  position: relative;
+
+  &:hover{
+    .nav__link{
+        background-color: $blue;
+    }
+    > .subnav{
+      display: block;
+    }
+  }
+}
+.nav__link{
+  display: block;
+  padding: 1.35rem 1.5rem;
+
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+
+  transition: background-color .2s linear;
+
+  &.drop-down{
+    position: relative;
+    padding-right: 3.5rem;
+
+    &:after{
+      content: "";
+      display: block;
+
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $white transparent transparent transparent;
+
+      position: absolute;
+      top: 50%;
+      right: 1.35rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+
